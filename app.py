@@ -13,7 +13,7 @@ from reportlab.platypus import (
 )
 import time
 from datetime import datetime
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, send_from_directory
 from modules.url_checker import analyze_url
 from modules.history import (
     init_db,
@@ -23,6 +23,19 @@ from modules.history import (
 )
 app = Flask(__name__)
 APP_START_TIME = time.monotonic()
+
+@app.route("/service-worker.js")
+def service_worker():
+    response = send_from_directory(
+        "static",
+        "service-worker.js",
+        mimetype="application/javascript"
+    )
+    response.headers["Service-Worker-Allowed"] = "/"
+    response.headers["Cache-Control"] = "no-cache"
+    return response
+
+
 
 # Create the scan history database and table
 init_db()

@@ -1,0 +1,25 @@
+﻿{
+  "id": "/",
+  "name": "Tyrone Threat",
+  "short_name": "Tyrone Threat",
+  "description": "Cybersecurity awareness and threat analysis dashboard.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#100b20",
+  "theme_color": "#100b20",
+  "icons": [
+    {
+      "src": "/static/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

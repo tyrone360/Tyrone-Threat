@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#080a08">
+    <meta name="theme-color" content="#100b20">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Tyrone Threat">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
 
     <title>Tyrone Threat | Security Command Centre</title>
 
@@ -921,6 +924,21 @@
 </div>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js")
+            .then(registration => {
+                console.log("Tyrone Threat PWA registered:", registration.scope);
+            })
+            .catch(error => {
+                console.error("PWA registration failed:", error);
+            });
+    });
+}
+</script>
 
 </body>
 </html>
