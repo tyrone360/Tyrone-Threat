@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080a08">
+
+    <title>Tyrone Threat | Security Command Centre</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">
+                <i data-lucide="shield-check"></i>
+            </div>
+            <div>
+                <h2>TYRONE<span>THREAT</span></h2>
+                <small>SECURITY INTELLIGENCE</small>
+            </div>
+        </div>
+
+        <div class="menu-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav">
+            <a href="#overview" class="nav-link active">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#monitoring" class="nav-link">
+                <i data-lucide="activity"></i>
+                <span>Monitoring</span>
+            </a>
+
+            <a href="#intelligence" class="nav-link">
+                <i data-lucide="radar"></i>
+                <span>Threat Intelligence</span>
+            </a>
+
+            <a href="#url-checker" class="nav-link">
+                <i data-lucide="globe"></i>
+                <span>URL Safety Checker</span>
+            </a>
+
+            <a href="#reports" class="nav-link">
+                <i data-lucide="file-text"></i>
+                <span>Security Reports</span>
+            </a>
+
+            <div class="menu-label">INTELLIGENCE</div>
+
+            <a href="#assistant" class="nav-link">
+                <i data-lucide="bot"></i>
+                <span>AI Assistant</span>
+            </a>
+
+            <a href="#learning" class="nav-link">
+                <i data-lucide="graduation-cap"></i>
+                <span>Learning Centre</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="protection-box">
+                <i data-lucide="shield-check"></i>
+                <h4>Protection Status</h4>
+                <p>Your demo platform is operational.</p>
+                <span class="online-label">SYSTEM ONLINE</span>
+            </div>
+
+            <a href="#settings" class="nav-link">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="overview">
+
+        <!-- TOP NAVBAR -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menu-toggle"
+                        aria-label="Toggle navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+                    <p class="breadcrumb">WORKSPACE / OVERVIEW</p>
+                    <h3>Security Dashboard</h3>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <div class="connection">
+                    <span class="pulse"></span>
+                    All systems operational
+                </div>
+
+                <button class="icon-button" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <div class="profile">
+                    <div class="avatar">TT</div>
+                    <div class="profile-info">
+                        <strong>Administrator</strong>
+                        <small>Security Analyst</small>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="dashboard-content">
+
+            <!-- WELCOME -->
+            <section class="welcome-section">
+
+                <div>
+                    <span class="section-tag">
+                        <span class="pulse"></span>
+                        SECURITY OPERATIONS CENTRE
+                    </span>
+
+                    <h1>Welcome to <span>Tyrone Threat.</span></h1>
+
+                    <p>
+                        Your central workspace for security intelligence,
+                        threat awareness and defensive analysis.
+                    </p>
+                </div>
+
+                <div class="date-card">
+                    <i data-lucide="calendar-days"></i>
+                    <span id="current-date">Loading date...</span>
+                </div>
+
+            </section>
+
+            <!-- STATISTICS -->
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Threat Records</span>
+                        <div class="stat-icon green">
+                            <i data-lucide="shield-alert"></i>
+                        </div>
+                    </div>
+                    <h2 id="threat-count">--</h2>
+                    <p>Dashboard threat records</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Security Alerts</span>
+                        <div class="stat-icon orange">
+                            <i data-lucide="bell-ring"></i>
+                        </div>
+                    </div>
+                    <h2 id="alert-count">--</h2>
+                    <p>Recorded security alerts</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Protected Systems</span>
+                        <div class="stat-icon blue">
+                            <i data-lucide="server"></i>
+                        </div>
+                    </div>
+                    <h2 id="system-count">--</h2>
+                    <p>Demo platform records</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>System Health</span>
+                        <div class="stat-icon green">
+                            <i data-lucide="heart-pulse"></i>
+                        </div>
+                    </div>
+                    <h2 class="health-value" id="health-status">Loading</h2>
+                    <p>Application status</p>
+                </article>
+
+            </section>
+
+            <!-- ANALYTICS -->
+            <section class="content-grid" id="monitoring">
+
+                <article class="panel analytics-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Security Activity</h3>
+                            <p>Illustrative weekly activity overview</p>
+                        </div>
+
+                        <span class="panel-badge">SAMPLE DATA</span>
+                    </div>
+
+                    <div class="chart">
+                        <div class="chart-y-labels">
+                            <span>100</span>
+                            <span>75</span>
+                            <span>50</span>
+                            <span>25</span>
+                            <span>0</span>
+                        </div>
+
+                        <div class="chart-area">
+                            <div class="chart-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="chart-bars">
+                                <div class="bar-group">
+                                    <div class="bar" style="height:35%"></div>
+                                    <small>MON</small>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height:60%"></div>
+                                    <small>TUE</small>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height:42%"></div>
+                                    <small>WED</small>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height:78%"></div>
+                                    <small>THU</small>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height:55%"></div>
+                                    <small>FRI</small>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height:30%"></div>
+                                    <small>SAT</small>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar" style="height:48%"></div>
+                                    <small>SUN</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- SYSTEM HEALTH -->
+                <article class="panel health-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Platform Status</h3>
+                            <p>Application availability</p>
+                        </div>
+
+                        <i data-lucide="activity" class="heading-icon"></i>
+                    </div>
+
+                    <div class="health-circle">
+                        <div class="circle-inner">
+                            <i data-lucide="shield-check"></i>
+                            <strong>ONLINE</strong>
+                            <small>DEMO STATUS</small>
+                        </div>
+                    </div>
+
+                    <div class="health-details">
+                        <div>
+                            <span>Backend</span>
+                            <strong id="backend-status">Checking</strong>
+                        </div>
+
+                        <div>
+                            <span>Application</span>
+                            <strong>Running</strong>
+                        </div>
+
+                        <div>
+                            <span>Security data</span>
+                            <strong>Demo</strong>
+                        </div>
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- LOWER SECTION -->
+            <section class="content-grid lower-grid">
+
+                <article class="panel" id="intelligence">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Threat Intelligence</h3>
+                            <p>Explore common cybersecurity threats</p>
+                        </div>
+
+                        <i data-lucide="radar" class="heading-icon"></i>
+                    </div>
+
+                    <div class="threat-item">
+                        <div class="threat-icon">
+                            <i data-lucide="mail-warning"></i>
+                        </div>
+                        <div>
+                            <strong>Phishing Attacks</strong>
+                            <small>Fraudulent messages and websites</small>
+                        </div>
+                        <span class="threat-tag">AWARENESS</span>
+                    </div>
+
+                    <div class="threat-item">
+                        <div class="threat-icon">
+                            <i data-lucide="bug"></i>
+                        </div>
+                        <div>
+                            <strong>Malware</strong>
+                            <small>Malicious software threats</small>
+                        </div>
+                        <span class="threat-tag">AWARENESS</span>
+                    </div>
+
+                    <div class="threat-item">
+                        <div class="threat-icon">
+                            <i data-lucide="lock"></i>
+                        </div>
+                        <div>
+                            <strong>Data Breaches</strong>
+                            <small>Unauthorised information exposure</small>
+                        </div>
+                        <span class="threat-tag">AWARENESS</span>
+                    </div>
+
+                </article>
+
+                <article class="panel" id="reports">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Quick Access</h3>
+                            <p>Explore platform capabilities</p>
+                        </div>
+
+                        <i data-lucide="zap" class="heading-icon"></i>
+                    </div>
+
+                    <a href="#url-checker" class="quick-action">
+                        <i data-lucide="globe"></i>
+                        <span>URL Safety Checker</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#assistant" class="quick-action">
+                        <i data-lucide="bot"></i>
+                        <span>AI Security Assistant</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#learning" class="quick-action">
+                        <i data-lucide="book-open"></i>
+                        <span>Security Learning Centre</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </article>
+
+            </section>
+
+            <!-- URL SAFETY CHECKER -->
+            <section class="url-scanner-section" id="url-checker">
+
+                <div class="scanner-heading">
+                    <div>
+                        <span class="section-tag">
+                            <span class="pulse"></span>
+                            DEFENSIVE SECURITY TOOL
+                        </span>
+
+                        <h2>URL <span>Safety Scanner</span></h2>
+
+                        <p>
+                            Analyse website addresses for common warning signs
+                            before deciding whether to trust a link.
+                        </p>
+                    </div>
+
+                    <div class="scanner-main-icon">
+                        <i data-lucide="scan-search"></i>
+                    </div>
+                </div>
+
+                <div class="scanner-panel">
+
+                    <div class="scanner-input-heading">
+                        <div>
+                            <i data-lucide="globe"></i>
+                            <strong>Website URL Analysis</strong>
+                        </div>
+
+                        <span class="scanner-version">ENGINE V1.0</span>
+                    </div>
+
+                    <form id="url-check-form">
+
+                        <label for="url-input">ENTER WEBSITE ADDRESS</label>
+
+                        <div class="url-input-wrapper">
+                            <i data-lucide="link"></i>
+
+                            <input
+                                type="url"
+                                id="url-input"
+                                placeholder="https://example.com"
+                                autocomplete="url"
+                                required
+                            >
+
+                            <button type="submit" id="scan-url-button">
+                                <i data-lucide="scan"></i>
+                                Analyse URL
+                            </button>
+                        </div>
+
+                        <p class="scanner-hint">
+                            <i data-lucide="info"></i>
+                            Your URL is analysed locally by the application.
+                            The scanner does not visit the website.
+                        </p>
+
+                    </form>
+
+                    <div id="scanner-loading" class="scanner-loading" hidden>
+                        <div class="scanner-loader"></div>
+                        <span>ANALYSING URL INDICATORS...</span>
+                    </div>
+
+                    <div id="scanner-error" class="scanner-error" hidden></div>
+
+                    <div id="scanner-results" class="scanner-results" hidden>
+
+                        <div class="result-top">
+                            <div>
+                                <span class="result-label">ANALYSIS COMPLETE</span>
+                                <h3>Security Assessment</h3>
+                            </div>
+
+                            <span id="risk-badge" class="risk-badge">LOW RISK</span>
+                        </div>
+
+                        <div class="result-score-area">
+
+                            <div class="risk-score-circle" id="risk-score-circle">
+                                <div>
+                                    <strong id="risk-score">0</strong>
+                                    <small>RISK SCORE</small>
+                                </div>
+                            </div>
+
+                            <div class="result-summary">
+                                <span>ANALYSED DOMAIN</span>
+                                <strong id="result-hostname">example.com</strong>
+                                <p id="result-summary-text">
+                                    Analysis findings will appear here.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="findings-heading">
+                            <h4>Security Findings</h4>
+                            <span id="finding-count">0 FINDINGS</span>
+                        </div>
+
+                        <div id="findings-list" class="findings-list"></div>
+
+                        <div class="recommendation-box">
+                            <i data-lucide="shield-check"></i>
+
+                            <div>
+                                <strong>Security Recommendation</strong>
+                                <p id="recommendation-text"></p>
+                            </div>
+                        </div>
+
+                        <p class="scanner-disclaimer" id="scanner-disclaimer"></p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+<!-- LIVE SECURITY MONITORING -->
+<section class="monitoring-section" id="monitoring">
+
+    <div class="section-heading">
+        <div>
+            <span class="section-tag">REAL-TIME OVERVIEW</span>
+            <h2>Live Security Monitoring</h2>
+            <p>Monitor application status and recorded URL security activity.</p>
+        </div>
+
+        <div class="monitoring-status">
+            <span class="status-indicator" id="monitoring-status-indicator"></span>
+            <span id="monitoring-status-text">Connecting...</span>
+        </div>
+    </div>
+
+    <!-- Monitoring cards -->
+    <div class="monitoring-grid">
+
+        <div class="monitor-card">
+            <span class="monitor-label">Backend Status</span>
+            <h3 id="monitor-backend-status">Checking...</h3>
+            <p>Flask application connection</p>
+        </div>
+
+        <div class="monitor-card">
+            <span class="monitor-label">Application Uptime</span>
+            <h3 id="monitor-uptime">--</h3>
+            <p>Time since application started</p>
+        </div>
+
+        <div class="monitor-card">
+            <span class="monitor-label">Total URL Scans</span>
+            <h3 id="monitor-total-scans">0</h3>
+            <p>Recorded security checks</p>
+        </div>
+
+        <div class="monitor-card">
+            <span class="monitor-label">Low Risk</span>
+            <h3 id="monitor-low-risk">0</h3>
+            <p>Low-risk scan results</p>
+        </div>
+
+        <div class="monitor-card">
+            <span class="monitor-label">Medium Risk</span>
+            <h3 id="monitor-medium-risk">0</h3>
+            <p>Medium-risk scan results</p>
+        </div>
+
+        <div class="monitor-card">
+            <span class="monitor-label">High Risk</span>
+            <h3 id="monitor-high-risk">0</h3>
+            <p>High-risk scan results</p>
+        </div>
+
+    </div>
+
+    <!-- Recent monitoring activity -->
+    <div class="monitoring-activity">
+        <div class="activity-heading">
+            <div>
+                <h3>Recent Security Activity</h3>
+                <p>Latest URL checks recorded by Tyrone Threat.</p>
+            </div>
+
+            <span id="monitor-last-updated">Waiting for data...</span>
+        </div>
+
+        <div id="monitoring-activity-list">
+            <p class="monitor-empty">Loading monitoring activity...</p>
+        </div>
+    </div>
+
+    <p class="monitoring-disclaimer">
+        Monitoring covers this application's status and saved URL scan
+        records. It does not monitor your entire computer or network.
+    </p>
+
+</section>
+<!-- END LIVE SECURITY MONITORING -->
+
+            
+<!-- SCAN HISTORY SECTION -->
+<section class="history-section" id="scan-history">
+
+    <div class="scanner-heading">
+        <div>
+            <span class="section-tag">
+                <span class="pulse"></span>
+                SECURITY ACTIVITY
+            </span>
+
+            <h2>Recent <span>Scan History</span></h2>
+
+            <p>
+                Review your previously analysed website addresses.
+            </p>
+        </div>
+
+        <div class="scanner-main-icon">
+            <i data-lucide="history"></i>
+        </div>
+    </div>
+
+    <div class="history-panel">
+
+        <div class="history-header">
+            <div>
+                <i data-lucide="database"></i>
+                <strong>Previous URL Analyses</strong>
+            </div>
+
+            <button type="button" id="refresh-history">
+                <i data-lucide="refresh-cw"></i>
+                Refresh
+            </button>
+        </div>
+
+        <div class="history-table-wrapper">
+
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Website</th>
+                        <th>Risk Score</th>
+                        <th>Risk Level</th>
+                        <th>Date Analysed</th>
+                    </tr>
+                </thead>
+
+                <tbody id="history-table-body">
+                    <tr>
+                        <td colspan="4">Loading scan history...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="history-footer">
+            <span id="history-total">0 saved scans</span>
+            <span>LOCAL DATABASE</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECURITY REPORTS -->
+<section class="reports-section" id="security-reports">
+
+    <div class="reports-heading">
+        <div>
+            <span class="section-tag">SECURITY ANALYTICS</span>
+            <h2>Security Reports</h2>
+            <p>Review recorded URL scans and security risk statistics.</p>
+        </div>
+
+        <span class="report-status">LOCAL DATABASE</span>
+    </div>
+
+    <!-- Report summary -->
+    <div class="reports-grid">
+
+        <div class="report-card">
+            <span>Total Security Scans</span>
+            <h3 id="report-total-scans">0</h3>
+            <p>All recorded URL analyses</p>
+        </div>
+
+        <div class="report-card">
+            <span>Low Risk</span>
+            <h3 id="report-low-risk">0</h3>
+            <p>Low-risk results</p>
+        </div>
+
+        <div class="report-card">
+            <span>Medium Risk</span>
+            <h3 id="report-medium-risk">0</h3>
+            <p>Medium-risk results</p>
+        </div>
+
+        <div class="report-card">
+            <span>High Risk</span>
+            <h3 id="report-high-risk">0</h3>
+            <p>High-risk results</p>
+        </div>
+
+    </div>
+
+    <!-- Risk distribution -->
+    <div class="report-analysis">
+
+        <div class="report-analysis-heading">
+            <h3>Risk Distribution</h3>
+            <span>Recorded scan results</span>
+        </div>
+
+        <div class="risk-bar-group">
+
+            <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                    <span>Low Risk</span>
+                    <strong id="report-low-percentage">0%</strong>
+                </div>
+                <div class="risk-bar-track">
+                    <div class="risk-bar-fill low-fill"
+                         id="report-low-bar"></div>
+                </div>
+            </div>
+
+            <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                    <span>Medium Risk</span>
+                    <strong id="report-medium-percentage">0%</strong>
+                </div>
+                <div class="risk-bar-track">
+                    <div class="risk-bar-fill medium-fill"
+                         id="report-medium-bar"></div>
+                </div>
+            </div>
+
+            <div class="risk-bar-item">
+                <div class="risk-bar-label">
+                    <span>High Risk</span>
+                    <strong id="report-high-percentage">0%</strong>
+                </div>
+                <div class="risk-bar-track">
+                    <div class="risk-bar-fill high-fill"
+                         id="report-high-bar"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Report information -->
+    <div class="report-footer">
+        <div>
+            <strong>Report Information</strong>
+            <p id="report-generated-date">Waiting for report data...</p>
+        </div>
+
+        <button type="button" id="refresh-security-report">
+            Refresh Report
+        </button>
+        <a href="/api/reports/pdf"
+   class="download-report-button"
+   id="download-security-report">
+    Download PDF
+</a>
+    </div>
+
+</section>
+<!-- END SECURITY REPORTS -->
+
+
+<!-- AI SECURITY ASSISTANT -->
+<section class="assistant-section" id="assistant">
+
+    <div class="assistant-heading">
+        <div>
+            <span class="section-tag">INTELLIGENT SECURITY SUPPORT</span>
+            <h2>AI Security Assistant</h2>
+            <p>Your educational cybersecurity assistant.</p>
+        </div>
+
+        <span class="assistant-status">
+            <span class="assistant-status-dot"></span>
+            ASSISTANT ONLINE
+        </span>
+    </div>
+
+    <div class="assistant-container">
+
+        <div class="assistant-welcome">
+            <div class="assistant-avatar">TT</div>
+            <div>
+                <h3>Welcome to Tyrone AI.</h3>
+                <p>
+                    Ask me about cybersecurity threats, URL scan findings,
+                    phishing awareness and defensive security practices.
+                </p>
+            </div>
+        </div>
+
+        <!-- Suggested questions -->
+        <div class="assistant-suggestions">
+            <button type="button" class="suggestion-btn"
+                    data-question="What is phishing?">
+                What is phishing?
+            </button>
+
+            <button type="button" class="suggestion-btn"
+                    data-question="How can I recognise a suspicious website?">
+                Recognise suspicious websites
+            </button>
+
+            <button type="button" class="suggestion-btn"
+                    data-question="How can I protect my computer from malware?">
+                Malware protection
+            </button>
+
+            <button type="button" class="suggestion-btn"
+                    data-question="Explain the difference between HTTP and HTTPS.">
+                HTTP vs HTTPS
+            </button>
+        </div>
+
+        <!-- Chat messages -->
+        <div class="assistant-chat" id="assistant-chat"
+             aria-live="polite">
+
+            <div class="chat-message assistant-message">
+                <div class="chat-avatar">TT</div>
+                <div class="chat-bubble">
+                    Hello! I'm Tyrone AI, your cybersecurity learning
+                    assistant. What would you like to learn today?
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Chat input -->
+        <form id="assistant-form" class="assistant-input-area">
+
+            <input
+                type="text"
+                id="assistant-input"
+                placeholder="Ask a cybersecurity question..."
+                maxlength="500"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="assistant-send">
+                Send
+            </button>
+
+        </form>
+
+        <p class="assistant-disclaimer">
+            Educational assistant only. Responses provide general
+            cybersecurity awareness and are not professional security
+            assessments.
+        </p>
+
+    </div>
+
+</section>
+<!-- END AI SECURITY ASSISTANT -->
+
+<!-- CYBERSECURITY KNOWLEDGE TEST -->
+<section class="quiz-section" id="quiz">
+    <div class="section-heading">
+        <div>
+            <span class="section-label">TEST YOUR KNOWLEDGE</span>
+            <h2>Cybersecurity Knowledge Test</h2>
+            <p>Challenge yourself and improve your cybersecurity awareness.</p>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <span id="quiz-progress">Question 1 of 5</span>
+            <span id="quiz-score">Score: 0</span>
+        </div>
+
+        <div class="quiz-progress-bar">
+            <div id="quiz-progress-fill"></div>
+        </div>
+
+        <div id="quiz-content">
+            <h3 id="quiz-question">Loading question...</h3>
+            <div id="quiz-options" class="quiz-options"></div>
+        </div>
+
+        <div id="quiz-feedback" class="quiz-feedback" aria-live="polite"></div>
+
+        <div class="quiz-actions">
+            <button id="quiz-next" class="primary-btn" disabled>
+                Next Question
+            </button>
+            <button id="quiz-restart" class="secondary-btn" hidden>
+                Restart Quiz
+            </button>
+        </div>
+    </div>
+</section>
+<!-- END CYBERSECURITY KNOWLEDGE TEST -->
+
+
+            <footer class="footer">
+                <span>© 2026 TYRONE THREAT</span>
+                <span>SECURITY INTELLIGENCE PLATFORM · VERSION 1.0.0</span>
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
